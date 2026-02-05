@@ -1,0 +1,21 @@
+{% load static %}  <!-- BU SƏTR ƏN YUXARI OLMALIDIR -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Farzalisoy Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+{% block content %}
+{% endblock %}
+
+<!-- JS (optional) -->
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

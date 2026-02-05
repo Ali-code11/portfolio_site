@@ -1,0 +1,61 @@
+<section id="contact">
+    <h2>Get In Touch</h2>
+    <div class="container">
+        
+        <form method="POST" action="">
+            {% csrf_token %}
+            <p>Name</p>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <p>Email</p>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <p>Message</p>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        {% if form_sent %}
+        <div class="success-message">
+            Your message has been sent successfully!
+        </div>
+        {% endif %}
+
+         <div class="contact-info">
+         <article>
+            <img src="/static/images/mailicon.png" alt="Email">
+    <div class="contact-details">
+        <h3>Email</h3>
+        <p>alifarzalisoy099@gmail.com</p>
+    </div>
+        </article>
+
+        <article>
+            <img src="/static/images/phoneicon.png" alt="Phone">
+    <div class="contact-details">
+        <h3>Phone</h3>
+        <p>+994 77 355 98 66</p>
+    </div>
+        </article>
+
+
+    <article>
+    <img src="/static/images/linkedinicon.png" alt="LinkedIn">
+    <div class="contact-details">
+        <h3>Linkedin</h3>
+        <p><a href="https://www.linkedin.com/in/ali-farzalisoy/" target="_blank">LinkedIn Profile</a></p>
+    </div>
+    </article>
+
+
+        <article>
+    <img src="/static/images/githubimg.png" alt="GitHub">
+    <div class="contact-details">
+        <h3>Github</h3>
+        <p><a href="https://github.com/Ali-code11" target="_blank">GitHub Profile</a></p>
+    </div>
+    </article>
+
+    </div>
+
+
+   
+</section>

@@ -1,0 +1,99 @@
+{% load static %}
+<section id="skills">
+    <div class="skills-container">
+        <h2>Skills & Technologies</h2>
+
+        <div class="skills-grid">
+
+            <!-- Yuxarı sıra -->
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <img src="{% static 'images/code.png' %}" alt="Python">
+                </div>
+                <h3>Python</h3>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <img src="{% static 'images/django.png' %}" alt="Django">
+                </div>
+                <h3>Django</h3>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <img src="{% static 'images/cyber-security.png' %}" alt="Cybersecurity">
+                </div>
+                <h3>Cybersecurity</h3>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <img src="{% static 'images/code.png' %}" alt="HTML">
+                </div>
+                <h3>HTML</h3>
+            </div>
+
+            <!-- Aşağı sıra -->
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <img src="{% static 'images/code.png' %}" alt="CSS">
+                </div>
+                <h3>CSS</h3>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <img src="{% static 'images/linux.png' %}" alt="Bootstrap">
+                </div>
+                <h3>Kali Linux</h3>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <img src="{% static 'images/git.png' %}" alt="Git">
+                </div>
+                <h3>Git</h3>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <img src="{% static 'images/file.png' %}" alt="REST API">
+                </div>
+                <h3>Office Programs</h3>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% load static %}
+
+<section id="about">
+    <div class="container">
+        <h2>About Me</h2>
+        <div class="about-layout">
+            <div>
+        <p>I'm a Computer Engineering student with a deep passion for <br> cybersecurity and backend development. My journey in technology <br> has been driven by curiosity and a commitment to building secure, <br> scalable systems.</p>
+        <p>With expertise in Python and Django, I focus on creating robust web <br> applications that prioritize security and performance. I'm constantly <br> learning and exploring new technologies to stay at the forefront of the <br> industry.</p>
+        <p>My goal is to contribute to projects that make a real impact while <br> continuously developing my skills in cybersecurity and software <br> engineering.</p>
+        </div>
+        <div class="about-image">
+        <img src="{% static 'images/aboutme.png' %}" alt="Hero Image">
+    </div>
+    </div>
+    
+        <h3>Certificates</h3>
+        <div class="certificates">
+            {% for cert in certs %}
+                <div class="certificate-card">
+                    <img src="{{ cert.image.url }}" alt="{{ cert.name }}">
+                    <p>{{ cert.name }}</p>
+                    <p>{{ cert.organization }}</p>
+                    <p>{{ cert.date }}</p>
+                    {% if cert.link %}<a href="{{ cert.link }}" target="_blank">View Certificate</a>{% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
